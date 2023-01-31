@@ -1,0 +1,13 @@
+%sql sqlite:////home/jovyan/work/ds-curriculum/080-volatility-forecasting-in-india/stocks.sqlite
+
+sql = "SELECT * FROM 'CAMPAIGN.BSE'"
+df_campaign_test = pd.read_sql(
+     sql=sql, con=connection,parse_dates=["date"],index_col="date"
+)
+
+print("df_campaign_test type:", type(df_campaign_test))
+print()
+print(df_campaign_test.info())
+df_campaign_test.head()
+
+df()
